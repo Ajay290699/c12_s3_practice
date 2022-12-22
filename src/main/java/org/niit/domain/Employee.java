@@ -9,8 +9,8 @@ public class Employee {
     private String employeeName;
     private String employeeAddress;
     private long employeePhone;
-    @Autowired
-    @Qualifier("getDepartmentDetails")
+    //    @Autowired
+//    @Qualifier("getDepartmentDetails")
     private Department department;
 
     public Employee() {
@@ -60,6 +60,8 @@ public class Employee {
         return department;
     }
 
+    @Autowired
+    @Qualifier("getDepartmentDetails")
     public void setDepartment(Department department) {
         this.department = department;
     }
